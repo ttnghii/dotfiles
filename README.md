@@ -1,16 +1,18 @@
 # dotfiles
-My dotfiles
+My Fedora dotfiles
 
 ## Usage
 
-Install stow
+### Install stow and applications
 
 ```bash
-sudo dnf install stow
+sudo dnf install stow zsh fzf neovim tmux yazi \
+    bat btop cava fastfetch kitty alacritty
 ```
 
-Then, using stow to apply all setup
-
+### Setup
 ```bash
-stow .
+git clone https://github.com/quochuy242/dotfiles.git
+cd dotfiles
+./setup.sh
 ```
