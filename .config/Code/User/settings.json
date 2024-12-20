@@ -1,8 +1,8 @@
 {
-    "vscode_custom_css.imports": [
-        "file:///home/quochuy242/.config/Code/User/custom.css",
-        "file:///home/quochuy242/.config/Code/User/custom+script.js"
-    ],
+    // "vscode_custom_css.imports": [
+    //     "file:///home/quochuy242/.config/Code/User/custom.css",
+    //     "file:///home/quochuy242/.config/Code/User/custom+script.js"
+    // ],
     "editor.copyWithSyntaxHighlighting": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.emptySelectionClipboard": false,
@@ -189,10 +189,8 @@
             }
             ]
     },
-    "material-icon-theme.saturation": 0,
     "workbench.colorTheme": "Tokyo Night",
     "workbench.iconTheme": "material-icon-theme",
-    "material-icon-theme.files.color": "#42a5f5",
     "workbench.tree.enableStickyScroll": false,
     "git.openRepositoryInParentFolders": "never",
     "window.menuBarVisibility": "toggle",
