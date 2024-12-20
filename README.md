@@ -7,7 +7,7 @@ My Fedora dotfiles
 
 ```bash
 sudo dnf install stow zsh fzf neovim tmux yazi \
-    bat btop cava fastfetch kitty alacritty
+    bat btop cava fastfetch kitty alacritty nwg-look
 ```
 
 You can modify the install command based on your linux distro
