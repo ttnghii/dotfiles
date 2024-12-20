@@ -22,6 +22,11 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-Code
-setup.sh
 
+Code
+scripts
+uv.lock
+pyproject.toml
+\.venv
+.*\.log$
+.python-version
