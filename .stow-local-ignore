@@ -29,4 +29,5 @@ uv.lock
 pyproject.toml
 \.venv
 .*\.log$
-.python-version
+\.python-version
+scripts
