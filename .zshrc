@@ -157,3 +157,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # For rust
 . "$HOME/.cargo/env"
 
+# For atuin
+eval "$(atuin init zsh)"

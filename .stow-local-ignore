@@ -31,3 +31,4 @@ pyproject.toml
 .*\.log$
 \.python-version
 scripts
+grub
