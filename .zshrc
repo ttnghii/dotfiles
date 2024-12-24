@@ -8,11 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	zsh-autosuggestions
-	vscode
-	dnf
 	zsh-syntax-highlighting
-	python
-  git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -45,14 +41,29 @@ export BAT_THEME=tokyonight_night
 eval "$(fzf --zsh)"
 
 # --- setup fzf theme ---
-fg="#CBE0F0"
-bg="#011628"
-bg_highlight="#143652"
-purple="#B388FF"
-blue="#06BCE4"
-cyan="#2CF9ED"
-
-export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  --highlight-line \
+  --info=inline-right \
+  --ansi \
+  --layout=reverse \
+  --border=none
+  --color=bg+:#283457 \
+  --color=bg:#16161e \
+  --color=border:#27a1b9 \
+  --color=fg:#c0caf5 \
+  --color=gutter:#16161e \
+  --color=header:#ff9e64 \
+  --color=hl+:#2ac3de \
+  --color=hl:#2ac3de \
+  --color=info:#545c7e \
+  --color=marker:#ff007c \
+  --color=pointer:#ff007c \
+  --color=prompt:#2ac3de \
+  --color=query:#c0caf5:regular \
+  --color=scrollbar:#27a1b9 \
+  --color=separator:#ff9e64 \
+  --color=spinner:#ff007c \
+"
 
 # -- Use fd instead of fzf --
 
@@ -119,7 +130,19 @@ alias ff='fastfetch'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias dot='cd $HOME/dotfiles/'
 alias mkd='mkdir -p'
+alias py='python3'
+alias pyactvenv='source .venv/bin/activate'
+alias gaa='git add .'
+alias gcm='git commit -m'
+alias gpush='git push'
+alias gst='git status'
+alias pacin='sudo pacman -S'
+alias pacup='sudo pacman -Syu'
+alias paclist='sudo pacman -Q'
+alias pruin='paru -Sua'
+alias prulist='paru -Qua'
 
 # bun completions
 [ -s "/home/quochuy242/.bun/_bun" ] && source "/home/quochuy242/.bun/_bun"
@@ -134,3 +157,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # For rust
 . "$HOME/.cargo/env"
 
+# For atuin
+eval "$(atuin init zsh)"

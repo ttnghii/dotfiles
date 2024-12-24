@@ -1,11 +1,9 @@
 #!/usr/bin/zsh
 
 # Install dependencies
-dependencies=(python3 python-pip uv zsh tmux stow)
+dependencies=(python python-pip uv zsh tmux stow)
 for dependency in "${dependencies[@]}"; do
-    if ! dnf list --installed | greq $dependency &> /dev/null; then
-        sudo dnf install $dependency
-    fi
+	sudo pacman -S --noconfirm $dependency
 done
 
 # Install oh-my-zsh
@@ -24,7 +22,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 echo -e "\n\nInstall tpm - tmux plugins manager\n\n"
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
-# Install stow
+# Install stow and using stow to create symlink
 echo -e "\n\nUsing stow and source zsh and tmux to show the change\n\n"
 stow .
 source ~/.zshrc
@@ -32,10 +30,12 @@ tmux source ~/.config/tmux/tmux.conf
 
 # Download wallpaper
 ## Install python packages
+dotfile_path = "$HOME/dotfiles"
+cd ${dotfile_path}
 uv venv
 uv pip install -r pyproject.toml
 source .venv/bin/activate
 ## Run python script
-python3 scripts/download_wallpaper.py
+python3 $HOME/dotfiles/scripts/download_wallpaper.py
 
 echo -e "\n\nSetup completely"
