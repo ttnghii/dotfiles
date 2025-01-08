@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# Setup oh-my-zsh
-## Install oh-my-zsh
-echo -e "Install oh-my-zsh\n\n"
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o install.sh
-chmod +x install.sh
-./install.sh
-rm -r install.sh
-
 ## Install plugins
 echo -e "\n\nClone zsh-autocomplete, zsh-autosuggestion and zsh-fast-syntax-highlighting\n\n"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
