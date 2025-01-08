@@ -1,0 +1,9 @@
+--target=~/.config
+--ignore=.stowrc
+--ignore=DS_Store
+--ignore=atuin/*
+--ignore=.git
+--ignore=README.md
+--ignore=./LICENSE
+--ignore=setup.sh
+
