@@ -40,29 +40,35 @@ export BAT_THEME=tokyonight_night
 eval "$(fzf --zsh)"
 
 # --- setup fzf theme ---
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  --highlight-line \
-  --info=inline-right \
-  --ansi \
-  --layout=reverse \
-  --border=none
-  --color=bg+:#283457 \
-  --color=bg:#16161e \
-  --color=border:#27a1b9 \
-  --color=fg:#c0caf5 \
-  --color=gutter:#16161e \
-  --color=header:#ff9e64 \
-  --color=hl+:#2ac3de \
-  --color=hl:#2ac3de \
-  --color=info:#545c7e \
-  --color=marker:#ff007c \
-  --color=pointer:#ff007c \
-  --color=prompt:#2ac3de \
-  --color=query:#c0caf5:regular \
-  --color=scrollbar:#27a1b9 \
-  --color=separator:#ff9e64 \
-  --color=spinner:#ff007c \
-"
+#export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+#  --highlight-line \
+#  --info=inline-right \
+#  --ansi \
+#  --layout=reverse \
+#  --border=none
+#  --color=bg+:#283457 \
+#  --color=bg:#16161e \
+#  --color=border:#27a1b9 \
+#  --color=fg:#c0caf5 \
+#  --color=gutter:#16161e \
+#  --color=header:#ff9e64 \
+#  --color=hl+:#2ac3de \
+#  --color=hl:#2ac3de \
+#  --color=info:#545c7e \
+#  --color=marker:#ff007c \
+#  --color=pointer:#ff007c \
+#  --color=prompt:#2ac3de \
+#  --color=query:#c0caf5:regular \
+#  --color=scrollbar:#27a1b9 \
+#  --color=separator:#ff9e64 \
+#  --color=spinner:#ff007c \
+#"
+
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:#d0d0d0,fg+:#9aa5ce,bg:#1f2335,bg+:#3b4261
+  --color=hl:#7aa2f7,hl+:#7dcfff,info:#e0af68,marker:#9ece6a
+  --color=prompt:#ff007c,spinner:#bb9af7,pointer:#9d7cd8,header:#4fd6be
+  --color=border:#a9b1d6,label:#aeaeae,query:#d9d9d9'
 
 # -- Use fd instead of fzf --
 
@@ -124,15 +130,17 @@ alias vim='nvim'
 alias cd='z'
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first --all'
 alias lt='eza --icons=auto --tree --level=3'
-alias ls='eza --icons=always --long --color=always --no-permissions'
+alias ls='eza --icons=always --color=always --no-permissions --no-user --all'
 alias ff='fastfetch'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias dot='cd $HOME/dotfiles/'
+alias dot='cd $HOME/Clone/dotfiles/'
+alias hyprconf='cd $HOME/.config/hypr/config/'
 alias mkd='mkdir -p'
 alias py='python3'
 alias pyactvenv='source .venv/bin/activate'
+alias vsc='code'
 alias gaa='git add .'
 alias gcm='git commit -m'
 alias gpush='git push'
@@ -145,13 +153,14 @@ alias paclist='sudo pacman -Q'
 alias pacrm='sudo pacman -R'
 alias yain="yay -S"
 alias yarm="yay -R"
-alias yaup='yay -Syu --no-confirm'
+alias yaup='yay -Syu'
+alias yalist='yay -Q'
 # alias pruin='paru -Sua'
 # alias prulist='paru -Qua'
 
 
 # Run firstly fastfetch
-ff
+# ff
 
 # For rust
 . "$HOME/.cargo/env"

@@ -1,1 +1,1 @@
-/home/quochuy242/MyVault/Code_and_Linux/Dotfiles.md
+/home/quochuy242/MyVault/Ricing/Dotfiles.md

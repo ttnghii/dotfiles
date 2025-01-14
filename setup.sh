@@ -9,6 +9,7 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZS
 
 # Install TPM
 echo -e "\n\nClone Tmux Plugin Manager\n\n"
+mkdir -p ~/.config/tmux/plugins/tpm 
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # Setup bat
