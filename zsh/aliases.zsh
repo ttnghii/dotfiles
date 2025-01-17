@@ -21,19 +21,20 @@ if [[ -x "$(command -v zoxide)" ]]; then
     alias cd='z'
 fi 
 
-# Eza
-# if [[ -x "$(command -v eza)" ]]; then
-#     alias ll='eza -lha --icons=auto --sort=name --group-directories-first --all'
-#     alias lt='eza --icons=auto --tree --level=3'
-#     alias ls='eza --icons=always --color=always --no-permissions --no-user --all'
-# fi
-
-if [[ -x "$(command -v lsd)" ]]; then
-    alias ls="lsd -F"
-    alias la="lsd -AF"
-    alias ll="lsd -lAF"
-    alias lt="lsd -AF --tree"
+# Exa
+if [[ -x "$(command -v eza)" ]]; then
+    alias ll='exa -lha --icons=auto --sort=name --group-directories-first --all'
+    alias lt='exa --icons=auto --tree --level=3'
+    alias ls='exa --icons=always --color=always --no-permissions --no-user --all'
 fi
+
+# Lsd
+# if [[ -x "$(command -v lsd)" ]]; then
+#     alias ls="lsd -F"
+#     alias la="lsd -AF"
+#     alias ll="lsd -lAF"
+#     alias lt="lsd -AF --tree"
+# fi
 
 # Fastfetch
 if [[ -x "$(command -v fastfetch)" ]]; then

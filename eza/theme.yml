@@ -52,6 +52,7 @@ users:
 links:
   normal: { foreground: "#89ddff" }
   multi_link_file: { foreground: "#2ac3de" }
+  dash: { foreground: "#ff9e64" }
 
 git:
   new: { foreground: "#9ece6a" }
@@ -88,7 +89,7 @@ file_type:
   build: { foreground: "#1abc9c" }
   source: { foreground: "#bb9af7" }
 
-punctuation: { foreground: "#292e42" }
+punctuation: { foreground: "#c0caf5" }
 date: { foreground: "#e0af68" }
 inode: { foreground: "#737aa2" }
 blocks: { foreground: "#737aa2" }
@@ -100,4 +101,3 @@ symlink_path: { foreground: "#89ddff" }
 control_char: { foreground: "#ff9e64" }
 broken_symlink: { foreground: "#ff007c" }
 broken_path_overlay: { foreground: "#ff007c" }
-

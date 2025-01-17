@@ -52,6 +52,7 @@ users:
 links:
   normal: { foreground: "#89ddff" }
   multi_link_file: { foreground: "#2ac3de" }
+  dash: { foreground: "#ff9e64" }
 
 git:
   new: { foreground: "#9ece6a" }

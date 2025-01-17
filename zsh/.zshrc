@@ -61,3 +61,4 @@ source "$HOME/.config/zsh/functions.zsh"
 
 # ----- Other config -----
 export KEYTIMEOUT=50
+export EZA_CONFIG_DIR="$HOME/.config/eza/"
