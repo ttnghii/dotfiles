@@ -1,11 +1,10 @@
 format = '$all'
-right_format = '$cmd_duration$time'
 command_timeout = 360000
 
 [time]
 format = '[$time]($style) '
 style = 'bold white'
-disabled = false
+disabled = true
 
 [aws]
 symbol = "  "
@@ -145,7 +144,7 @@ Void = " "
 Windows = "󰍲 "
 
 [os]
-disabled = false
+disabled = true
 
 [package]
 symbol = "󰏗 "
