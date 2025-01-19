@@ -13,7 +13,7 @@ fi
 
 # Visual Studio Code
 if [[ -x "$(command -v code)" ]]; then
-    alias vsc='code'   
+    alias vsc='windsurf --enable-features=UseOzonePlatform --ozone-platform=wayland' 
 fi
 
 # Zoxide
@@ -55,14 +55,14 @@ alias mv='mv -iv'         # Move files with interactive and verbose mode
 
 # Python
 if [[ -x "$(command -v python3)" ]]; then
-    alias python='python3'
+    alias py='python3'
 fi
 
 
 # Git
 if [[ -x "$(command -v git)" ]]; then
     alias gaa='git add .'
-    alias gcm='git commit -m'
+    alias gcm='git commit'
     alias gpush='git push'
     alias gst='git status'
     alias gitfastpush='git add . && git commit -m "fast push, no info" && git push origin master' # ! Only use it for master branch and commit without message
