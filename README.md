@@ -24,7 +24,7 @@ makepkg -si
 So, start installing a lot of cool cli tools and packages
 
 ```bash
-sudo pacman -S zsh fish nushell \
+sudo pacman -Syu zsh fish nushell \
     stow \
     zoxide eza fd fzf bat \
     htop btop fastfetch \
@@ -45,14 +45,7 @@ Change your shell to `zsh`
 chsh -s $(which zsh) $(whoami)
 ```
 
-You should logout or reboot to take the change. Then, you install oh-my-zsh. You can check this gist [Link](https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df) or follow my script. 
-
-```bash
-# Use curl to install oh-my-zsh
-sudo pacman -S curl wget
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
+You should logout or reboot to take the change. If you want to use oh-my-zsh, you can check this gist [Link](https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df) . I use zinit now, so it is in my dotfiles
 
 ## 3. Setup atuin
 
