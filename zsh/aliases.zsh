@@ -23,9 +23,9 @@ fi
 
 # Exa
 if [[ -x "$(command -v eza)" ]]; then
-    alias ll='exa -lha --icons=auto --sort=name --group-directories-first --all'
-    alias lt='exa --icons=auto --tree --level=3'
-    alias ls='exa --icons=always --color=always --no-permissions --no-user --all'
+    alias ll='eza -lha --icons=auto --sort=name --group-directories-first --all'
+    alias lt='eza --icons=auto --tree --level=3'
+    alias ls='eza --icons=always --color=always --no-permissions --no-user --all'
 fi
 
 
