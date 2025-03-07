@@ -28,13 +28,6 @@ if [[ -x "$(command -v eza)" ]]; then
     alias ls='exa --icons=always --color=always --no-permissions --no-user --all'
 fi
 
-# Lsd
-# if [[ -x "$(command -v lsd)" ]]; then
-#     alias ls="lsd -F"
-#     alias la="lsd -AF"
-#     alias ll="lsd -lAF"
-#     alias lt="lsd -AF --tree"
-# fi
 
 # Fastfetch
 if [[ -x "$(command -v fastfetch)" ]]; then

@@ -5,37 +5,14 @@
 Firstly, you should install AUR helper, you can choose `paru` or `yay`. I prefer `yay`
 
 ```bash
-# Go Home
-cd ~ 
 
-# Create the directory storing all cloning github repos
-mkdir -p Clone  
-cd Clone
-
-# Install dependencies
-sudo pacman -S --needed git base-devel 
-
-# Clone and install yay
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
 ```
 
 So, start installing a lot of cool cli tools and packages
 
 ```bash
-sudo pacman -Syu zsh fish nushell \
-    stow \
-    zoxide eza fd fzf bat \
-    htop btop fastfetch \
-    nano vim neovim tmux \
-    yazi \
-    kitty alacritty ghostty \
-    atuin \
-    starship
-yay -S cava
-```
 
+```
 
 ## 2. Setup zsh and oh-my-zsh
 
@@ -59,7 +36,7 @@ atuin login --username <USERNAME>
 
 After logging in, you can sync data
 
-```bash 
+```bash
 atuin import auto
 atuin sync
 ```
@@ -74,4 +51,3 @@ cd ~/Clone/dotfiles
 ```
 
 Remember, reboot to take the change
-
