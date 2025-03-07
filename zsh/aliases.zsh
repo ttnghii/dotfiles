@@ -56,7 +56,7 @@ fi
 if [[ -x "$(command -v git)" ]]; then
     alias gaa='git add .'
     alias gcm='git commit'
-    alias gpush='git push'
+    alias gp='git push'
     alias gst='git status'
     alias gitfastpush='git add . && git commit -m "fast push, no info" && git push origin master' # ! Only use it for master branch and commit without message
 fi
