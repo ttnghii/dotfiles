@@ -8,7 +8,7 @@ NC='\033[0m' # No Color
 
 # Function for printing section headers
 print_section() {
-    echo -e "\n${BLUE}===${NC} ${GREEN}$1${NC}===\n"
+    echo -e "\n${BLUE}===${NC} ${GREEN}$1 ${NC}===\n"
 }
 
 # Go Home

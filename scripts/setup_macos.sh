@@ -8,7 +8,7 @@ NC='\033[0m' # No Color
 
 # Function for printing section headers
 print_section() {
-    echo -e "\n${BLUE}==>${NC} ${GREEN}$1${NC}\n"
+    echo -e "\n${BLUE}===${NC} ${GREEN}$1 ${NC}===\n"
 }
 
 # Go Home
@@ -65,12 +65,10 @@ bat cache --build || true  # Ignore errors if bat cache isn't needed
 
 # Check if stow target exists
 print_section "Setting up dotfiles with stow"
-(cd ~/dotfiles && stow .)
-if [ -f "~/dotfiles/.stowrc" ]; then
-    print_section "Running stow"
-    stow .
+if [ -d "$HOME/dotfiles" ]; then
+    cd "$HOME/dotfiles" && stow .
 else
-    print_section "No .stowrc found, skipping stow"
+    print_section "No dotfiles directory found, skipping stow"
 fi
 
 # Setup zsh

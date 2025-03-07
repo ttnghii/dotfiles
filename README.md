@@ -1,20 +1,25 @@
 > This dotfiles is in Arch-based and it's just about tools and applications, no DE, WM, font, theme, wallpaper setup
 
-## 1. Install necessary pkgs
-
-Firstly, you should install AUR helper, you can choose `paru` or `yay`. I prefer `yay`
+## 1. Clone dotfiles and setup
 
 ```bash
+git clone https://github.com/quochuy242/dotfiles.git ~/dotfiles/
+cd ~/dotfiles/
 
+# If you use Arch-based distro
+chmod +x scripts/setup_arch.sh
+./scripts/setup_arch.sh
+
+# If you use Ubuntu-based distro
+chmod +x scripts/setup_ubuntu.sh
+./scripts/setup_ubuntu.sh
+
+# If you use MacOS
+chmod +x scripts/setup_macos.sh
+./scripts/setup_macos.sh
 ```
 
-So, start installing a lot of cool cli tools and packages
-
-```bash
-
-```
-
-## 2. Setup zsh and oh-my-zsh
+## 2. Change shell
 
 Change your shell to `zsh`
 
@@ -22,7 +27,7 @@ Change your shell to `zsh`
 chsh -s $(which zsh) $(whoami)
 ```
 
-You should logout or reboot to take the change. If you want to use oh-my-zsh, you can check this gist [Link](https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df) . I use zinit now, so it is in my dotfiles
+You should logout or reboot to take the change. If you want to use oh-my-zsh, you can check this gist [Link](https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df) and I use zinit now
 
 ## 3. Setup atuin
 
@@ -41,13 +46,4 @@ atuin import auto
 atuin sync
 ```
 
-## 4. Apply my dotfiles
-
-Copy that
-
-```bash
-cd ~/Clone/dotfiles
-./setup.sh
-```
-
-Remember, reboot to take the change
+Remember, restart your terminal to take effect.
